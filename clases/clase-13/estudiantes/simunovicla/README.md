@@ -51,7 +51,7 @@ Necesitábamos determinar un valor más preciso, para que entregue algo más esp
 
 Agregamos un Console.clear( ), este limpia la consola para luego iniciar el calculo nuevamente.
 
-![Sonrisa y no sonrisa](https://github.com/simunovicla/audiv027-2023-2/blob/main/clases/clase-13/estudiantes/simunovicla/Imagenes/2.png)
+![Sonrisa y no sonrisa](https://github.com/simunovicla/audiv027-2023-2/blob/main/clases/clase-13/estudiantes/simunovicla/Imagenes/1.png)
 
 Agregamos el let wasSmiling =false; para que este detuviera el bucle, ya que este actualiza el estado, cambiando cuando se varia la expresión (”smile”y “not smile”). Esto ayudo a que los resultados fueran mejores.
 
