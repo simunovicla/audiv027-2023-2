@@ -29,7 +29,7 @@ Para poder continuar con el desarrollo de este modelo necesitamos investigar má
 
 Como ya teníamos la base para el desarrollo del proyecto (donde se detectaba la expresión de sonrisa), teníamos que ajustar los diferentes puntos de la cara para poder crear los otros dos modelos (en teoría).
 
-Al comenzar el trabajo detectamos errores en el proyecto pasado, decomisos completarlo y mejorarlo los errores que teníamos eran //textoHMTL.innerHTML= “smile”; al estar invocando algo que no estaba planteado anteriormente.  
+Al comenzar el trabajo detectamos errores en el proyecto pasado, decomisos completarlo y mejorarlo los errores que teníamos eran `//textoHMTL.innerHTML= “smile”;` al estar invocando algo que no estaba planteado anteriormente.  
 
 Recurrimos a una asesoría con un especialista en el área de la informática de la arquitectura Cloud (Oscar Muñoz), para aclarar dudas y detectar errores. Y pudimos entender con mayor claridad  las posibilidades del modelo que podíamos lograr con los datos que teníamos puesto que nos demoramos mucho en tratar de plantear las expresiones.
 
@@ -43,17 +43,19 @@ Esto era poco sensible puesto que son menos keypoint.
 
 Añadimos distancia entre las variables y agregamos más keypoint para que la detección de la sonrisa sea mas precisa y que la predicción del calculo de la sonrisa “smile” no sea tan variable. Dejando la media en <80% 
 
- Luego queríamos detectar cuando no se esta sonriendo llamandolo “not smiling” en las variables, como ya existía el calculo previo fue más fácil ajustar las medidas de este dejándolo en “smile”>  80% y “not smiling”<80%(siendo la media de 80%). 
+ Luego queríamos detectar cuando no se esta sonriendo llamandolo “not smiling” en las variables, como ya existía el calculo previo fue más fácil ajustar las medidas de este dejándolo en “smile”> 80% y “not smiling”<80% (siendo la media de 80%). 
 
 Queríamos hacer que el proyecto arrojará resultados más concretos para poder tener un mejor resultado, puesto que arrojaba el % de la sonrisa y un constante cambio de resultados. Gracias a esto comprendimos que el Facemesh realiza un análisis constante a través de los keypoint del rostro, y para poder determinar los cambios del rostro “smile” y “not smiling” entrega resultados constante, transformandolo en un bucle infinito.
 
 Necesitábamos determinar un valor más preciso, para que entregue algo más especifico 
 
-Agregamos un Console.clear( ), este limpia la consola para luego iniciar el calculo nuevamente.
+Tratamos de agregar `Console.clear( )` para detener este bucle y tener solo un resultado, ya que Consolo.clear() limpia la consola depues de entregar el resultado para luego iniciar el calculo nuevamente.
+
+Esto no resulto ya que al querer detener este bucle constante, `Console.clear()` detenía completamente la acción de analizar constantemente los keypoints, por lo tanto no nos entregaba ningún resultado de “smile” y “not smiling”.
 
 ![Sonrisa y no sonrisa](https://github.com/simunovicla/audiv027-2023-2/blob/main/clases/clase-13/estudiantes/simunovicla/Imagenes/1.png)
 
-Agregamos el let wasSmiling =false; para que este detuviera el bucle, ya que este actualiza el estado, cambiando cuando se varia la expresión (”smile”y “not smile”). Esto ayudo a que los resultados fueran mejores.
+Agregamos el `let wasSmiling=false;` este no detiene el bucle constante de resultados, sino que delimita a solo entregar un resultado actual entre los cambios de ”smile”y “not smile, ya que este actualiza el estado. Esto ayudo a que los resultados fueran mejores.
 
 Finalmente decidimos experimentar con otros sujetos:
 
@@ -69,7 +71,7 @@ Prueba 2 “Stickers rostro de un Artista”: como resultado la consola detecta 
 | --- | --- |
 | <80% | >80% |
 
-Luego agregamos la expresión de ceño, las cuales tenían puntos de distancia de cara: 71 , 301 y los puntos variables siendo 417 y 285 determinado si el seño esta fruncido. Agregándolo como “ceño fruncido”, para luego agregar el “ceño neutro”.
+Luego agregamos la expresión de ceño, las cuales tenían puntos de distancia de cara: 71 , 301 y los puntos variables siendo 417 y 285 determinado si el ceño esta fruncido. Agregándolo como “ceño fruncido”, para luego agregar el “ceño neutro”.
 
 | Umbral sonrisa | Umbral no sonrisa |
 | --- | --- |
