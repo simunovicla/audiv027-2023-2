@@ -1,4 +1,4 @@
-# Detector de emociones  AI
+# Detector de expresiones  AI
 
 Equipo: [Ximena Muñoz](https://github.com/Anemix011), [Laura Simunovic Toledo](https://github.com/simunovicla) y [Fernanda Valdés](https://github.com/fernandavl).
 
