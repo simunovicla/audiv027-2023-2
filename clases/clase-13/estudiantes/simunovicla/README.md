@@ -35,17 +35,17 @@ Recurrimos a una asesoría con un especialista en el área de la informática de
 
 ![ReuniónMeet](https://github.com/simunovicla/audiv027-2023-2/blob/main/clases/clase-13/estudiantes/simunovicla/Imagenes/5.png)
 
-Ocupamos Visual Studio  Code (drawkeypoint)  para poder identificar de mejor manera los errores siendo más exacto. Nos entregó resultados de las más constante vs menos constante (keypoint).
+Ocupamos Visual Studio  Code (drawkeypoint)  para poder identificar de mejor manera los errores y determinar la forma de solucionarlos.
 
-Después ajustamos las distancias entre las mejillas y las comisuras de la boca dejándolo en 70% para para detectar la sonrisa o “smile”, pero este valor no era ajustable a los distintos tipos de rostros, ya que al haber medidas diferentes entre las mejillas y las comisuras de la boca era difícil de detectar al comportarse de diferente manera.
+Trabajamos en base a los resultados de las variables más constante vs menos constante (keypoint), en donde ajustábamos las distancias entre las mejillas y las comisuras de los labios dejándolo en <70% para detectar la sonrisa o “smile”, pero este valor no era ajustable a los distintos tipos de rostros, ya que al haber medidas diferentes entre las mejillas y las comisuras de la boca era difícil de detectar al comportarse de diferente manera.
 
 Esto era poco sensible puesto que son menos keypoint.
 
-Añadimos distancia entre las variables y agregamos más keypoint para que la detección de la sonrisa sea mas precisa y que la predicción del calculo de la sonrisa “smile” no sea tan variable. Dejando la media en 80% 
+Añadimos distancia entre las variables y agregamos más keypoint para que la detección de la sonrisa sea mas precisa y que la predicción del calculo de la sonrisa “smile” no sea tan variable. Dejando la media en <80% 
 
- Luego queríamos detectar cuando no se esta sonriendo llamandolo “not smiling” en las variables, como ya existía el calculo previo fue más fácil ajustar las medidas de este dejando en >  80% (siendo la media 80%) <80%.
+ Luego queríamos detectar cuando no se esta sonriendo llamandolo “not smiling” en las variables, como ya existía el calculo previo fue más fácil ajustar las medidas de este dejándolo en “smile”>  80% y “not smiling”<80%(siendo la media de 80%). 
 
-Queríamos hacer que el proyecto arrojará resultados más concretos para poder tener un resultado mejor, puesto que arrojaba el % de la sonrisa y estaba en constante cambio. El facemesh realiza un análisis constante a través de los keypoint del rostro, para determinar los cambios del rostro realiza una análisis constante, siendo un bucle infinito.
+Queríamos hacer que el proyecto arrojará resultados más concretos para poder tener un mejor resultado, puesto que arrojaba el % de la sonrisa y un constante cambio de resultados. Gracias a esto comprendimos que el Facemesh realiza un análisis constante a través de los keypoint del rostro, y para poder determinar los cambios del rostro “smile” y “not smiling” entrega resultados constante, transformandolo en un bucle infinito.
 
 Necesitábamos determinar un valor más preciso, para que entregue algo más especifico 
 
